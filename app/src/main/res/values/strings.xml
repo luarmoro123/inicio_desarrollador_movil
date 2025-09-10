@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">pruebas</string>
+    <string name="strTitulo">Mi primer aplicacion movil</string>
+    <string name="strTelefonoTitulo">Telefono</string>
+    <string name="strCalculadoraTitulo">Calculadora</string>
+    <string name="strCalculadora">Calculadora</string>
+    <string name="strNombre">Nombre del Alumno</string>
+    <string name="strMensaje">Mensaje</string>
+    <string name="strClic">Dar clic</string>
+    <string name="strLimpiar">Limpiar</string>
+    <string name="strCerrar">Cerrar</string>
+    <string name="strEntrada">Escribir aqui tu nombre</string>
+    <string name="strFaltan">Faltaron datos por capturar</string>
+    <string name="strSaludar_menu">Saludad Add</string>
+    <string name="str0">0</string>
+    <string name="str1">1</string>
+    <string name="str2">2</string>
+    <string name="str3">3</string>
+    <string name="str4">4</string>
+    <string name="str5">5</string>
+    <string name="str6">6</string>
+    <string name="str7">7</string>
+    <string name="str8">8</string>
+    <string name="str9">9</string>
+    <string name="strDividir">/</string>
+    <string name="strMultiplicar">*</string>
+    <string name="strRestar">-</string>
+    <string name="strSumar">+</string>
+    <string name="strIgual">=</string>
+    // imc
+    <string name="strImc">IMC</string>
+    <string name="strAltura">Altura</string>
+    <string name="strPeso">Peso</string>
+    <string name="strCalcular">Calcular</string>
+    <string name="strHombre">hombre</string>
+    <string name="strMujer">mujer</string>
+
+</resources>
