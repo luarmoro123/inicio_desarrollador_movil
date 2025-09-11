@@ -16,6 +16,7 @@ class MenuActivity : AppCompatActivity() {
         val btnSaludar = findViewById<AppCompatButton>(R.id.SaludarAdd)
         val btnTelefono = findViewById<AppCompatButton>(R.id.TelefonoAdd)
         val btnCalculadora = findViewById<AppCompatButton>(R.id.CalculadoraAdd)
+        val btnIMC = findViewById<AppCompatButton>(R.id.IMCAdd)
         fun navigateToSaludarApp(){
             val saludarAdd = Intent(this, MainActivity::class.java)
             startActivity(saludarAdd)
@@ -28,10 +29,15 @@ class MenuActivity : AppCompatActivity() {
             val calcularAdd = Intent(this, CalculadoraActivity::class.java)
             startActivity(calcularAdd)
         }
+        fun navigateToIMCApp(){
+            val IMCAdd = Intent(this, IMCApp::class.java)
+            startActivity(IMCAdd)
+        }
 
         btnSaludar.setOnClickListener { navigateToSaludarApp() }
         btnTelefono.setOnClickListener { navigateToTelefonoApp() }
         btnCalculadora.setOnClickListener { navigateToCalculadoraApp() }
+        btnIMC.setOnClickListener { navigateToIMCApp() }
 
 
 

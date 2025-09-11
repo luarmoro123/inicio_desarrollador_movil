@@ -28,7 +28,6 @@ class IMCApp : AppCompatActivity() {
         setContentView(R.layout.activity_imcapp)
         initComponents()
         initListeners()
-        initUI()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -44,10 +43,16 @@ class IMCApp : AppCompatActivity() {
     }
     private fun initListeners(){
         viewMale.setOnClickListener {
-            setGenderColor()
+            if(isMaleSelected){
+                setGenderColor()
+                changeGender()
+            }
         }
         viewFemale.setOnClickListener {
-            setGenderColor()
+            if(isFemaleSelected) {
+                setGenderColor()
+                changeGender()
+            }
         }
         rsHeight.addOnChangeListener { _,value,_ ->
             val df = DecimalFormat("#.##")
@@ -57,8 +62,8 @@ class IMCApp : AppCompatActivity() {
 
     }
     private fun changeGender(){
-        isMaleSelected = !isMaleSelected
-        isFemaleSelected = !isFemaleSelected
+        this.isMaleSelected = !isMaleSelected
+        this.isFemaleSelected = !isFemaleSelected
     }
     private fun setGenderColor(){
         viewMale.setCardBackgroundColor(getBackgroundColor(isMaleSelected))
@@ -68,10 +73,6 @@ class IMCApp : AppCompatActivity() {
     private fun getBackgroundColor(isComponentSelected: Boolean):Int{
         val referenColor= if(isComponentSelected) R.color.background_component_selected else R.color.background_component
         return ContextCompat.getColor(this,referenColor)
-    }
-    private fun initUI() {
-        setGenderColor()
-        changeGender()
     }
 
 }
